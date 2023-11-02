@@ -1,0 +1,1028 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    vertical-align: bottom;
+    box-sizing: border-box;
+}
+
+
+
+/* 横スクロール禁止 */
+/* スクロールゆっくり */
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/*  */
+
+
+/* ここから */
+
+.openbtn {
+    display: none;
+}
+
+#nav_target {
+    display: none;
+}
+
+header {
+    background-color: #21a1d0c9;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 99;
+    animation-name: fadeIn_Header;
+    animation-duration: 3s;
+}
+
+@keyframes fadeIn_Header {
+    from {
+
+        opacity: 30;
+        transform: translateY(-80px);
+    }
+
+    to {
+        opacity: 100;
+    }
+}
+
+.header_menu {
+    width: 80%;
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_logo {
+    margin-left: 2em;
+    /* margin-top: 2em; */
+}
+
+.nav_menu {
+    width: 40%;
+}
+
+.nav_menu ul {
+    /* width: 60%; */
+    height: 100%;
+    list-style-type: none;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.line {
+    height: 60px;
+
+    border: 1px white solid;
+}
+
+.nav_menu ul li {
+    width: 50%;
+
+}
+
+.nav_menu ul li:hover {
+    transform: translateY(5px);
+
+}
+
+
+.nav_menu ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav_menu ul li a p {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 1.5em;
+}
+
+.nav_menu ul li a small {
+    display: block;
+    text-align: center;
+}
+
+.space {
+    height: 400px;
+}
+
+
+.vegas {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+#app {
+    transform: rotate(-10deg);
+    color: white;
+    z-index: 99;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    margin: 40px auto;
+    padding: 28px;
+    line-height: 1.5;
+    /* border: 1px solid #ffffff; */
+    /* border-radius: 5px; */
+    background-color: transparent;
+    /* box-shadow: 2px 2px 5px 0px rgba(200, 200, 200, 1); */
+    font-family: 'Sawarabi Mincho', serif;
+    font-size: 4em;
+}
+
+#typewriter::after {
+    content: "|";
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* -------------------------- about -------------------------- */
+
+.about_title {
+    background-color: #41c2c7;
+    width: 100%;
+    text-align: center;
+    display: block;
+
+}
+
+.about_title h1 {
+    padding-top: 2em;
+    font-size: 3em;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    border-bottom: white dashed 5px;
+    margin-bottom: 1em;
+}
+
+
+.about_title p {
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.about_title img {
+    display: block;
+    width: 400px;
+    object-fit: contain;
+}
+
+.about_box {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+
+    margin: 0 auto;
+    text-align: start;
+    padding-bottom: 3em;
+}
+
+.about_box:nth-child(3) {
+    flex-direction: row-reverse;
+}
+
+.about_text {
+    font-size: 24px;
+    line-height: 2;
+}
+
+.about_box_img {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.about_box_img img {
+    border: white solid 5px;
+    border-radius: 10px;
+    width: 230px;
+    object-fit: cover;
+    object-position: 100% 100%;
+
+}
+
+/* -------------------------- staff -------------------------- */
+.staff {
+    padding-bottom: 3em;
+}
+
+.staff_title {
+    width: 100%;
+    text-align: center;
+}
+
+.staff_title h1 {
+    padding-top: 2em;
+    display: inline-block;
+    text-align: center;
+    border-bottom: #2185d0 dashed 5px;
+    font-size: 3em;
+    margin-bottom: 4rem;
+
+}
+
+.staff_title p {
+    font-size: 24px;
+    margin-bottom: 2rem;
+}
+
+.staff ul {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.staff_box {
+    list-style-type: none;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+}
+
+
+
+.staff_box img {
+    width: 100%;
+    position: absolute;
+    border: #2185d0 solid 5px;
+    border-radius: 100%;
+}
+
+
+
+.staff_box p {
+    /* width: 16px; */
+    background-color: #2185d0;
+    padding: 8px 0;
+    color: white;
+    top: -20px;
+    right: -10px;
+    position: absolute;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+}
+
+.staff_box p:nth-child(2) {
+    border: #2185d0 solid 1px;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    color: #2185d0;
+    position: absolute;
+}
+
+
+
+/* -------------------------- course -------------------------- */
+.course_title {
+    background-color: #2fac8f;
+    width: 100%;
+    text-align: center;
+}
+
+.course_title h1 {
+    padding-top: 2em;
+
+    margin: 0 auto;
+    font-size: 3em;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    border-bottom: white dashed 5px;
+    margin-bottom: 2em;
+    /* position: relative; */
+
+}
+
+.course1,
+.course2,
+.course3 {
+    transition: all .5s ease;
+
+}
+
+.course1_box,
+.course2_box,
+.course3_box {
+    z-index: 88;
+    filter: grayscale(0%);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.course1_box img,
+.course2_box img,
+.course3_box img {
+    margin: 5%;
+    flex-basis: 20%;
+}
+
+
+
+.course1_box {
+    background-color: #21a1d0;
+}
+
+.course2_box {
+    background-color: #41c2c7;
+}
+
+.course3_box {
+    background-color: #2fac8f
+}
+
+.course1:hover,
+.course2:hover,
+.course3:hover {
+    filter: grayscale(40%);
+
+}
+
+.course1:hover .course1_box img,
+.course2:hover .course2_box img,
+.course3:hover .course3_box img {
+    animation-name: courseHover;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+@keyframes courseHover {
+    100% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(5px)
+    }
+
+    50% {
+        transform: translateY(0px)
+    }
+
+    25% {
+        transform: translateY(-5px)
+    }
+
+    0% {
+        transform: translateY(0px);
+    }
+
+}
+
+.course1_text,
+.course2_text,
+.course3_text,
+.course1_hide,
+.course2_hide,
+.course3_hide {
+    padding-left: 20%;
+    color: white;
+}
+
+.course1_text h1,
+.course2_text h1,
+.course3_text h1 {
+    font-size: 2.6rem;
+}
+
+.course1_text p,
+.course2_text p,
+.course3_text p {
+    margin-top: 0.75em;
+    font-size: 1.6rem;
+}
+
+.course1_plus,
+.course2_plus,
+.course3_plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 55%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    margin-top: -20px;
+    box-sizing: border-box;
+    transform: rotate(45deg);
+    transform-origin: center center;
+    transition-duration: 0.2s;
+}
+
+
+.course1_plus::before,
+.course1_plus::after,
+.course2_plus::before,
+.course2_plus::after,
+.course3_plus::before,
+.course3_plus::after {
+    content: '';
+    position: absolute;
+    /* コンテントブランク これがないとサイズの指定できない*/
+    width: 20px;
+    height: 2px;
+    background: white;
+    transition-duration: 0.5s;
+}
+
+
+.course1_plus::before,
+.course2_plus::before,
+.course3_plus::before {
+    transform: rotate(45deg);
+}
+
+.course1_plus::after,
+.course2_plus::after,
+.course3_plus::after {
+    transform: rotate(135deg);
+}
+
+/* アクティブ付与の場合 */
+
+.course1_plus.active,
+.course2_plus.active,
+.course3_plus.active {
+    transform: rotate(405deg);
+}
+
+.course1_plus.active::before,
+.course1_plus.active::after,
+.course2_plus.active::before,
+.course2_plus.active::after,
+.course3_plus.active::before,
+.course3_plus.active::after {
+    transition-duration: 0.5s;
+
+}
+
+.course1_plus.active::before,
+.course2_plus.active::before,
+.course3_plus.active::before {
+    transform: rotate(-45deg);
+}
+
+.course1_plus.active::after,
+.course2_plus.active::after,
+.course3_plus.active::after {
+    transform: rotate(-45deg);
+}
+
+.course1_hide,
+.course2_hide,
+.course3_hide {
+    display: none;
+}
+
+.course1_hide {
+    background-color: #21a1d0;
+}
+
+.course2_hide {
+    background-color: #41c2c7;
+}
+
+.course3_hide {
+    background-color: #2fac8f;
+}
+
+.course1_hide_box_text ul,
+.course2_hide_box_text ul,
+.course3_hide_box_text ul {
+    /* padding-top: 3rem; */
+    padding-bottom: 2rem;
+}
+
+.course1_hide_box_text li,
+.course2_hide_box_text li,
+.course3_hide_box_text li {
+    margin-left: 5%;
+}
+
+.course1_hide_box,
+.course2_hide_box,
+.course3_hide_box {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.course1_hide_box_content img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+
+}
+
+/* ------------------ star ------------------ */
+
+
+
+.star5_rating {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    white-space: nowrap;
+    color: #CCCCCC;
+    left: 50%;
+    transform: translateX(-50%);
+    /* グレーカラー 自由に設定化 */
+    /*font-size: 30px; フォントサイズ 自由に設定化 */
+}
+
+.star5_rating:before,
+.star5_rating:after {
+    content: '★★★★★';
+}
+
+.star5_rating:after {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #ffcf32;
+
+    /* イエローカラー 自由に設定化 */
+}
+
+.star5_rating[data-rate="5"]:after {
+    width: 100%;
+}
+
+/* 星5 */
+.star5_rating[data-rate="4.5"]:after {
+    width: 90%;
+}
+
+/* 星4.5 */
+.star5_rating[data-rate="4"]:after {
+    width: 80%;
+}
+
+/* 星4 */
+.star5_rating[data-rate="3.5"]:after {
+    width: 70%;
+}
+
+/* 星3.5 */
+.star5_rating[data-rate="3"]:after {
+    width: 60%;
+}
+
+/* 星3 */
+.star5_rating[data-rate="2.5"]:after {
+    width: 50%;
+}
+
+/* 星2.5 */
+.star5_rating[data-rate="2"]:after {
+    width: 40%;
+}
+
+/* 星2 */
+.star5_rating[data-rate="1.5"]:after {
+    width: 30%;
+}
+
+/* 星1.5 */
+.star5_rating[data-rate="1"]:after {
+    width: 20%;
+}
+
+/* 星1 */
+.star5_rating[data-rate="0.5"]:after {
+    width: 10%;
+}
+
+/* 星0.5 */
+.star5_rating[data-rate="0"]:after {
+    width: 0%;
+}
+
+/* 星0 */
+
+/* -------------------------- calender -------------------------- */
+
+#calendar {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.setumeikai {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.setumeikai h1 {
+    padding-top: 2em;
+    margin-bottom: 1em;
+    font-size: 3em;
+    text-align: center;
+
+}
+
+.setumeikai_text {
+    display: flex;
+    justify-content: center;
+}
+
+.setumeikai_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px
+}
+
+.setumeikai_box_box {
+    width: 40%
+}
+
+.setumeikai_box_box dl {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.setumeikai_box_box dt {
+    width: 7em
+}
+
+.setumeikai_box_box dd {
+    position: relative;
+    padding-left: 2em;
+    width: calc(100% - 7em)
+}
+
+.setumeikai_box_box dd::before,
+.setumeikai_box_box dd::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    border-radius: 6px;
+    background-color: #4184ca;
+    width: 3px;
+    height: 100%;
+    content: ""
+}
+
+.setumeikai_box_box dd::before {
+    left: 0
+}
+
+.setumeikai_box_box dd::after {
+    left: 5px
+}
+
+.setumeikai_box_box img {
+
+    margin: 1em auto;
+    padding: 1em 0;
+    border: solid 2px #4184ca;
+}
+
+.setumeikai_box2 .note {
+    color: #ff5e2e
+}
+
+.setumeikai_box2_course {
+    margin: 2em 0;
+    border-radius: 5em;
+    padding: 1em 0;
+    text-align: center;
+    font-weight: bold;
+    border: #4184ca 2px solid
+}
+
+.schedule_calendar {
+    width: 100%;
+    text-align: center;
+}
+
+footer {
+    margin-top: 2em;
+    background-color: #21a1d0c9;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+@media screen and (max-width:480px) {
+
+    /* 画面サイズが480pxからはここを読み込む */
+    .header_menu {
+        width: 100%;
+    }
+
+    .nav_menu {
+        display: none;
+    }
+
+    .header_logo img {
+        width: 80%;
+    }
+
+    /* spanタグはインライン要素＞変更が必要なる */
+
+    .openbtn {
+        /* background-color: skyblue; */
+        width: 50px;
+        height: 50px;
+        border: solid white 2px;
+        border-radius: 5px;
+        right: 2%;
+        position: fixed;
+        z-index: 99;
+        cursor: pointer;
+    }
+
+    .openbtn span {
+        display: inline-block;
+        width: 80%;
+        height: 3px;
+        background-color: white;
+        border-radius: 2px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all 0.5s;
+
+    }
+
+    .openbtn span:nth-child(1) {
+        top: 15px;
+    }
+
+    .openbtn span:nth-child(2) {
+        top: 23px;
+    }
+
+    .openbtn span:nth-child(3) {
+        top: 31px;
+    }
+
+    /*  */
+
+    .active span:nth-child(1) {
+        transform: translateY(6px) rotate(-45deg);
+        width: 100%;
+        top: 18px;
+        left: 0px;
+    }
+
+    .active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .active span:nth-child(3) {
+        transform: translateY(-6px) rotate(45deg);
+        width: 100%;
+        left: 0px;
+    }
+
+
+    /* タイプライター */
+    #app {
+        transform: rotate(-10deg);
+        color: white;
+        z-index: 99;
+        position: absolute;
+        top: 20%;
+        width: 80%;
+        line-height: 1.5;
+        border: 1px solid #ffffff;
+        background-color: transparent;
+        font-family: 'Sawarabi Mincho', serif;
+        font-size: 2em;
+    }
+
+
+    /* -------------------------- ナビゲーション -------------------------- */
+    .openbtn {
+        display: block;
+    }
+
+    #nav_target {
+        z-index: 999;
+        background-color: skyblue;
+        position: fixed;
+        right: 0%;
+        height: 100vh;
+        width: 100%;
+        padding-top: 30vh;
+        bottom: 100%;
+        transform: translateX(-100%);
+        transition: all 0.5s;
+        display: block;
+    }
+
+    nav ul li {
+        text-align: center;
+        list-style-type: none;
+    }
+
+    .nav_active {
+        bottom: 0;
+        transition: all 0.5s;
+    }
+
+    /* about */
+    .about_title h1 {
+        font-size: 2em;
+    }
+
+    .about_title p {
+        font-size: 0.8em;
+        margin-bottom: 1em;
+    }
+
+    .about_title img {
+        display: none;
+    }
+
+    .about_box_img img {
+        display: none;
+    }
+
+    /* staff */
+    .staff_title {
+        width: 90%;
+        margin: 0 auto;
+
+    }
+
+    .staff_title h1 {
+        font-size: 2em;
+    }
+
+    .staff_title p {
+        font-size: 20px;
+    }
+
+    .staff ul li:nth-child(1),
+    .staff ul li:nth-child(2),
+    .staff ul li:nth-child(3) {
+        display: none;
+    }
+
+
+    /* COURSE */
+    .course_title h1 {
+        font-size: 2em;
+    }
+
+    .course1_box,
+    .course2_box,
+    .course3_box {
+        display: block;
+    }
+
+    .course1_text h1,
+    .course2_text h1,
+    .course3_text h1 {
+        font-size: 1.5em;
+    }
+
+    .course1_text p,
+    .course2_text p,
+    .course3_text p {
+        margin-top: 0.5em;
+        font-size: 1em;
+    }
+
+    .course1_box img,
+    .course2_box img,
+    .course3_box img {
+        width: 30px;
+
+    }
+
+    .course1_plus,
+    .course2_plus,
+    .course3_plus {
+        top: 20%;
+        right: 10%;
+    }
+
+    .course1_hide_box,
+    .course2_hide_box,
+    .course3_hide_box {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .course1_hide_box_content {
+        width: 50%;
+        padding: 8px 0;
+    }
+
+    .course1_hide_box_content img {
+        transform: translateX(50%);
+    }
+
+
+    .course1_hide_box_text ul,
+    .course2_hide_box_text ul,
+    .course3_hide_box_text ul {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .course1_text,
+    .course2_text,
+    .course3_text,
+    .course1_hide,
+    .course2_hide,
+    .course3_hide {
+        padding-left: 5%;
+    }
+
+    /* schedule */
+
+    .setumeikai {}
+
+    .setumeikai h1 {
+        padding-top: 1em;
+        margin-bottom: 1em;
+        font-size: 2em;
+
+    }
+
+
+
+    .setumeikai_text {
+        display: block;
+        text-align: center;
+    }
+
+    .setumeikai_box {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .setumeikai_box_box {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .setumeikai_box_box dl {
+        /* display: block; */
+        flex-wrap: wrap
+    }
+
+    .setumeikai_box_box img {
+        width: 100%;
+
+    }
+
+    .setumeikai_box2 {
+        margin: 0 auto;
+        width: 90%;
+    }
+}

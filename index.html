@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>北関東学院</title>
+
+    <!-- CSS読み込み -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-- GoogleFont読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <!-- GoogleFont読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <!-- Vega2 -->
+    <link rel="stylesheet" href="./vegas/vegas.min.css">
+    <!-- Fullカレンダー読み込み -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js'></script>
+    <script src="./js/index.global.min.js"></script>
+</head>
+<html>
+
+<body>
+    <header>
+        <div class="header_menu">
+
+            <!-- ハンバーガーメニュー480px以下で表示 -->
+            <div class="header_logo"><img src="./img/logo.png" alt=""></div>
+            <div class="openbtn " id="target" onclick="activebtn()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- ここから -->
+
+            <nav class="nav_menu">
+                <ul>
+                    <span class="line"></span>
+                    <li>
+                        <a href="#about">
+                            <p>ABOUT</p>
+                            <small>北関東学院とは</small>
+                        </a>
+                    </li>
+                    <span class="line"></span>
+
+                    <li><a href="#staff">
+                            <p>STAFF</p>
+                            <small>スタッフ紹介</small>
+                        </a>
+                    </li>
+                    <span class="line"></span>
+
+                    <li>
+                        <a href="#course">
+                            <p>COURSE</p>
+                            <small>コース概要</small>
+                        </a>
+                    </li>
+                    <span class="line"></span>
+
+                    <li>
+                        <a href="#schedule">
+                            <p>SCHEDULE</p>
+                            <small>スケジュール</small>
+                        </a>
+                    </li>
+                    <span class="line"></span>
+
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- ハンバーガーメニューオープン要素 -->
+    <nav id="nav_target">
+        <ul>
+            <li>
+                <a href="#about">
+                    <p>ABOUT</p>
+                    <small>北関東学院とは</small>
+                </a>
+            </li>
+            <li>
+                <a href="#staff">
+                    <p>STAFF</p>
+                    <small>スタッフ紹介</small>
+                </a>
+            </li>
+            <li>
+                <a href="#course">
+                    <p>COURSE</p>
+                    <small>コース概要</small>
+                </a>
+            </li>
+            <li>
+                <a href="#schedule">
+                    <p>SCHEDULE</p>
+                    <small>スケジュール</small>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <div class="vegas"></div>
+
+
+    <div id="app">
+        <span id="typewriter"></span>
+    </div>
+
+    <!-- <div class="space"></div> -->
+    <section class="about" id="about">
+        <div class="about_title">
+            <h1 class="main_title">北関東学院とは？</h1>
+            <div class="about_box">
+                <img src="./img/support_fig_01.png" alt="">
+                <div class="about_text">
+                    <p>北関東学院は、新しい挑戦に立ち向かい、就職を成功に導くための求職者支援訓練校です。</p>
+                    <p>私たちはウェブデザイン、コーディング、プログラミングなどのテクノロジースキルを学ぶ場所です。
+                    <p>私たちの使命は、あなたのポテンシャルを最大限に引き出し、キャリアを形にするお手伝いをすることです。</p>
+                    <div class="about_box_img">
+                        <img src="./img/about/deskwork.jpg" alt="">
+                        <img src="./img/about/study.jpg" alt="">
+                        <img src="./img/about/edit.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="about_box">
+                <img src="./img/ロゴマークホワイト.png" alt="">
+                <div class="about_text">
+                    <p>公的な職業訓練は、受講料が無料です。<br>
+                        （※教材費・検定料は別途かかります。）</p>
+                    <p></p>
+                    <p>訓練期間中は雇用保険の失業給付が延長されたり、職業訓練給付金等の支援制度があります。</p>
+                    <p>ハロートレーニングの詳細については<a
+                            href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/jinzaikaihatsu/rishokusha.html">コチラ</a>から
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="about_box">
+
+        </div>
+    </section>
+    <section class="staff" id="staff">
+        <div class="staff_title">
+            <h1>専門家の指導講師陣</h1>
+            <p>講師陣は業界での豊富な経験を活かし、実際のプロジェクトや課題を通じて、実用的なスキルと知識を提供します。</p>
+            <p>彼らの指導のもと、あなたは最新のテクノロジーとベストプラクティスを習得し、成功するための土台を築くでしょう。</p>
+            <p>我々の講師陣と共に、未来のキャリアを築きましょう。彼らはあなたの成長と目標達成に全力で取り組むパートナーです。</p>
+        </div>
+        <ul>
+
+            <li class="staff_box">
+                <img src="./img/staffpng/01matsumura.png" alt="">
+                <p>講師名：松村</p>
+                <p>担当科目：プログラミング</p>
+            </li>
+            <li class="staff_box">
+                <img src="./img/staffpng/02mori02.png" alt="">
+                <p>講師名：森</p>
+                <p>担当科目：ウェブデザイン</p>
+            </li>
+            <li class="staff_box">
+                <img src="./img/staffpng/03ogawa_k.png" alt="">
+                <p>講師名：小川</p>
+                <p>担当科目：ウェブデザイン</p>
+            </li>
+            <li class="staff_box">
+                <img src="./img/staffpng/04ishida.png" alt="">
+                <p>講師名：石田</p>
+                <p>担当科目：ウェブデザイン</p>
+            </li>
+            <li class="staff_box">
+                <img src="./img/staffpng/05kanai.png" alt="">
+                <p>講師名：金井</p>
+                <p>担当科目：プログラミング</p>
+            </li>
+        </ul>
+        <ul>
+            <li class="staff_box">
+                <img src="./img/staffpng/06hyodo.png" alt="">
+                <p>講師名：兵藤</p>
+                <p>担当科目：ウェブデザイン</p>
+            </li>
+            <li class="staff_box">
+                <img src="./img/staffpng/07kato.png" alt="">
+                <p>講師名：加藤</p>
+                <p>担当科目：ウェブデザイン</p>
+            </li>
+
+            <li class="staff_box">
+                <img src="./img/staffpng/08kudo02.png" alt="">
+                <p>講師名：工藤</p>
+                <p>担当科目：ウェブデザイン</p>
+
+            </li>
+            <li class="staff_box">
+                <img src="./img/staffpng/09kamiyama.png" alt="">
+                <p>講師名：神山</p>
+                <p>担当科目：ウェブデザイン</p>
+            </li>
+            <li class="staff_box">
+                <img src="./img/staffpng/10tanaka_c.png" alt="">
+                <p>講師名：田中</p>
+                <p>担当科目：ウェブデザイン</p>
+            </li>
+        </ul>
+        <ul>
+            <li class="staff_box">
+                <img src="./img/staffpng/11tsuda.png" alt="">
+                <p>講師名：津田</p>
+                <p>担当科目：ウェブデザイン</p>
+
+            </li>
+            <li class="staff_box">
+                <img src="./img/staffpng/12ogawa.png" alt="">
+                <p>講師名：小川</p>
+                <p>担当科目：ウェブデザイン</p>
+            </li>
+            <li class="staff_box">
+                <img src="./img/staffpng/13ishimaru.png" alt="">
+                <p>講師名：石丸</p>
+                <p>担当科目：プログラミング</p>
+            </li>
+            <li class="staff_box">
+                <img src="./img/staffpng/14yamada.png" alt="">
+                <p>事務員：小川</p>
+                <p>担当：社内事務</p>
+            </li>
+            <li class="staff_box">
+                <img src="./img/staffpng/15kawamura.png" alt="">
+                <p>事務員：川村</p>
+                <p>担当：就職支援</p>
+            </li>
+
+        </ul>
+    </section>
+
+    <section id="course">
+        <div class="course_title">
+            <h1>訓練コース概要</h1>
+        </div>
+        <div class="course_box">
+            <ul class="accordion-area">
+
+                <li class="course1">
+                    <div class="course1_box" id="course1_box_action">
+                        <img src="https://marineping.esashi.town/wp-content/themes/marineping/assets/images/pic_bg_plan_01.svg"
+                            alt="">
+                        <div class="course1_plus" id="course1_plus">
+                        </div>
+                        <div class="course1_text">
+                            <h1>WEBデザインクリエーター科</h1>
+                            <p>HTML(HTML5)・CSS・Photoshop・Illustraor・jQuery・Wordpress</p>
+                        </div>
+                    </div>
+                    <div class="course1_hide" id="course1_hide_content">
+                        <div class="course1_hide_box_text">
+                            <ul>
+                                <li>
+                                    <h1>コース概要:</h1>
+                                    <ul>
+                                        <li>ウェブデザインコースは、ウェブサイトやアプリケーションの視覚的な要素を設計するための基本的なスキルを習得します。</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h1>カリキュラムハイライト:</h1>
+                                    <ul>
+                                        <li>グラフィックデザインの原則とツールの紹介</li>
+                                        <li>ユーザーインターフェース（UI）デザインとユーザーエクスペリエンス（UX）設計</li>
+                                        <li>クリエイティブソフトウェア（Photoshop、Illustrator、Sketch）の使用</li>
+                                        <li>レスポンシブウェブデザインの実践</li>
+                                        <li>プロジェクトとポートフォリオの構築</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h1>習得できるスキル</h1>
+                                    <div class="course1_hide_box">
+                                        <div class="course1_hide_box_content">
+                                            <img src="./icon/html5.com.png" alt="">
+                                            <p>
+                                                <span class="star5_rating" data-rate="3"></span>
+                                            </p>
+                                        </div>
+                                        <div class="course1_hide_box_content">
+                                            <img src="./icon/css.com.png" alt="">
+                                            <p>
+                                                <span class="star5_rating" data-rate="3"></span>
+                                            </p>
+                                        </div>
+                                        <div class="course1_hide_box_content">
+                                            <img src="./icon/photoshop.png" alt="">
+                                            <p>
+                                                <span class="star5_rating" data-rate="4"></span>
+                                            </p>
+                                        </div>
+                                        <div class="course1_hide_box_content">
+                                            <img src="./icon/illustrator.png" alt="">
+                                            <p>
+                                                <span class="star5_rating" data-rate="4"></span>
+                                            </p>
+                                        </div>
+                                        <div class="course1_hide_box_content">
+                                            <img src="./icon/jQuery.png" alt="">
+                                            <p>
+                                                <span class="star5_rating" data-rate="3"></span>
+                                            </p>
+                                        </div>
+                                        <div class="course1_hide_box_content">
+                                            <img src="./icon/figma.png" alt="">
+                                            <p>
+                                                <span class="star5_rating" data-rate="3"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="course2">
+                    <div class="course2_box" id="course2_box_action">
+                        <img src="https://marineping.esashi.town/wp-content/themes/marineping/assets/images/pic_bg_plan_02.svg"
+                            alt="" loading="lazy">
+                        <div class="course2_plus" id="course2_plus">
+                        </div>
+                        <div class="course1_text">
+                            <h1>フロントエンド構築科</h1>
+                            <p>HTML(HTML5)・CSS・JavaScript・PHP・jQuery</p>
+                        </div>
+
+                    </div>
+                    <div class="course2_hide" id="course2_hide_content">
+                        <div class="course2_hide_box_text">
+                            <ul>
+                                <li>
+                                    <h1>コース概要:</h1>
+                                    <ul>
+                                        <li>フロントエンド開発コースは、ウェブページやアプリケーションのユーザーインターフェースを構築するための技術的なスキルを習得します。</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h1>カリキュラムハイライト:</h1>
+                                    <ul>
+                                        <li>HTML5とCSS3の基礎</li>
+                                        <li>JavaScriptとjQueryのプログラミング</li>
+                                        <li>レスポンシブデザインとブラウザ互換性</li>
+                                        <li>プロジェクトベースの学習と実践</li>
+                                        <li>プロジェクトとポートフォリオの構築</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h1>習得できるスキル</h1>
+                                    <div class="course1_hide_box">
+                                        <div class="course1_hide_box_content">
+                                            <img src="./icon/html5.com.png" alt="">
+                                            <p>
+                                                <span class="star5_rating" data-rate="4"></span>
+                                            </p>
+                                        </div>
+                                        <div class="course1_hide_box_content">
+                                            <img src="./icon/css.com.png" alt="">
+                                            <p>
+                                                <span class="star5_rating" data-rate="4"></span>
+                                            </p>
+                                        </div>
+                                        <div class="course1_hide_box_content">
+                                            <img src="./icon/js.com.png" alt="">
+                                            <p>
+                                                <span class="star5_rating" data-rate="4"></span>
+                                            </p>
+                                        </div>
+                                        <div class="course1_hide_box_content">
+                                            <img src="./icon/jQuery.png" alt="">
+                                            <p>
+                                                <span class="star5_rating" data-rate="4"></span>
+                                            </p>
+                                        </div>
+                                        <div class="course1_hide_box_content">
+                                            <img src="./icon/MySQL.png" alt="">
+                                            <p>
+                                                <span class="star5_rating" data-rate="4"></span>
+                                            </p>
+                                        </div>
+                                        <div class="course1_hide_box_content">
+                                            <img src="./icon/php.png" alt="">
+                                            <p>
+                                                <span class="star5_rating" data-rate="4"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="course3">
+                    <div class="course3_box" id="course3_box_action">
+                        <img src="https://marineping.esashi.town/wp-content/themes/marineping/assets/images/pic_bg_plan_03.svg"
+                            alt="" loading="lazy">
+                        <div class="course3_plus" id="course3_plus">
+                        </div>
+                        <div class="course3_text">
+                            <h1>WEBプログラミングデザイン科</h1>
+                            <p>HTML(HTML5)・CSS・JavaScript・PHP・jQuery</p>
+                        </div>
+
+                    </div>
+
+                    <div class="course3_hide" id="course3_hide_content">
+                        <div class="course3_hide_box_text">
+                            <ul>
+                                <li>
+                                    <h1>コース概要:</h1>
+                                    <ul>
+                                        <li>バックエンド開発コースは、ウェブアプリケーションのデータ処理とサーバーサイドプログラムの開発を重点的に学びます。</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h1>カリキュラムハイライト:</h1>
+                                    <ul>
+                                        <li>サーバーサイドプログラミング言語（例：Python、Ruby、Node.js）の学習</li>
+                                        <li>データベース設計とSQL記述の実践</li>
+                                        <li>ウェブアプリケーションフレームワークの使い方（例：Django、Ruby on Rails）</li>
+                                        <li>セキュリティと認証の実装</li>
+                                        <li>プロジェクトとポートフォリオの構築</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h1>習得できるスキル</h1>
+                                    <div class="course3_hide_box">
+                                        <div class="course1_hide_box_content">
+                                            <img src="./icon/html5.com.png" alt="">
+                                            <p>
+                                                <span class="star5_rating" data-rate="4"></span>
+                                            </p>
+                                        </div>
+                                        <div class="course1_hide_box_content">
+                                            <img src="./icon/css.com.png" alt="">
+                                            <p>
+                                                <span class="star5_rating" data-rate="4"></span>
+                                            </p>
+                                        </div>
+                                        <div class="course1_hide_box_content">
+                                            <img src="./icon/js.com.png" alt="">
+                                            <p>
+                                                <span class="star5_rating" data-rate="4"></span>
+                                            </p>
+                                        </div>
+                                        <div class="course1_hide_box_content">
+                                            <img src="./icon/jQuery.png" alt="">
+                                            <p>
+                                                <span class="star5_rating" data-rate="4"></span>
+                                            </p>
+                                        </div>
+                                        <div class="course1_hide_box_content">
+                                            <img src="./icon/MySQL.png" alt="">
+                                            <p>
+                                                <span class="star5_rating" data-rate="4"></span>
+                                            </p>
+                                        </div>
+                                        <div class="course1_hide_box_content">
+                                            <img src="./icon/php.png" alt="">
+                                            <p>
+                                                <span class="star5_rating" data-rate="4"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+    <section class="schedule" id="schedule">
+        <div class="setumeikai">
+            <h1>説明会について</h1>
+            <div class="setumeikai_text">
+                <p>個別説明会は随時行っており、</p>
+                <p>お電話にて受付しています。</p>
+                <p>お気軽にご連絡ください。</p>
+            </div>
+            <div class="setumeikai_box">
+                <div class="setumeikai_box_box">
+                    <dl>
+                        <dt>予約・問合先</dt>
+                        <dd>
+                            北関東学院<br>
+                            札幌市中央区南9条西3丁目2-10札幌KSビル<br>
+                            TEL:011-232-5508 平日9時~17時(土日祝休み)
+                        </dd>
+                    </dl>
+                    <img src="./img/access.jpg" alt="">
+                </div>
+                <div class="setumeikai_box2">
+                    <p class="note">※参加にあたっては事前予約が必要です</p>
+                    <div class="setumeikai_box2_course">
+                        <p>WEBデザインクリエーター科</p>
+                        <p>1ヶ月毎募集 定員２０名</p>
+                    </div>
+                    <div class="setumeikai_box2_course">
+                        <p>フロントエンド構築科</p>
+                        <p>6ヶ月毎募集 定員１５名</p>
+                    </div>
+                    <div class="setumeikai_box2_course">
+                        <p>WEBプログラミングデザイン科</p>
+                        <p>6ヶ月毎募集 定員１５名</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="schedule_calendar">
+            <h1>募集日程</h1>
+        </div>
+
+        <div id="calendar"></div>
+
+    </section>
+    <!-- <div class="space"></div> -->
+    <footer>
+        <small>© KITAKANTO GAKUIN 2023</small>
+    </footer>
+    <script>
+        // スクロールで発火
+        const scheduleAnime = () => {
+            let time = 0.2;
+            let value = time;
+            let scroll;
+            let winH = $(window).height();
+            let objTop = $('#about').offset().top;
+            $(window).on('scroll', function () {
+                scroll = $(window).scrollTop();
+                if (scroll >= objTop - winH / 2) {
+                    //ここに処理
+                }
+            });
+        }
+
+
+        // ハンバーガーメニュー
+
+        const activebtn = () => {
+            document.getElementById('target').classList.toggle("active");
+            document.getElementById('nav_target').classList.toggle("nav_active");
+        }
+
+
+        // クラス名.course1_box要素がクリックされたときに発火
+        $(".course1_box").on("click", (event) => {
+            let value = $(event.currentTarget).next();
+            value.stop().slideToggle(1500);
+            $('#course1_plus').toggleClass('active')
+        })
+
+        $(".course2_box").on("click", (event) => {
+            let value = $(event.currentTarget).next();
+            value.stop().slideToggle(1500);
+            $('#course2_plus').toggleClass('active')
+        })
+
+        $(".course3_box").on("click", (event) => {
+            let value = $(event.currentTarget).next();
+            value.stop().slideToggle(1500);
+            $('#course3_plus').toggleClass('active')
+        });
+
+
+        $(window).on('load', () => {
+            const subtitle = () => {
+                var num = Math.floor(10 * Math.random());
+                let mainTitle;
+                if (num <= 1) {
+                    mainTitle = "未来のテックプロフェッショナルになるチャンス"
+                } else if ((num >= 2) && (num <= 3)) {
+                    mainTitle = "ウェブの舞台裏を学び、夢のキャリアを実現しよう"
+                } else if ((num >= 3) && (num <= 4)) {
+                    mainTitle = "レイアウトからデザインまで、全てを学べる場所"
+                } else if ((num >= 4) && (num <= 5)) {
+                    mainTitle = "テクノロジーの力でキャリアを形にしましょう"
+                } else if ((num >= 5) && (num <= 6)) {
+                    mainTitle = "テクノロジーの未来を共に切り拓こう"
+                } else if ((num >= 6) && (num <= 7)) {
+                    mainTitle = "キャリアの高みへの始まりを踏み出そう"
+                } else if ((num >= 7) && (num <= 8)) {
+                    mainTitle = "デジタルエキスパートになるためのトレーニングセンター"
+                } else if ((num >= 8) && (num <= 9)) {
+                    mainTitle = "未来のテックリーダーへ道がここに"
+                } else if ((num >= 9) && (num <= 10)) {
+                    mainTitle = "テクノロジーの力でキャリアを形にしましょう"
+                } else if (num = 0) {
+                    mainTitle = "ウェブの世界を創造し、プロフェッショナルに成長する"
+                }
+                console.log(num);
+                return mainTitle;
+            }
+
+            const typewriter = (param) => {
+                let el = document.querySelector(param.el);
+                let speed = param.speed;
+                let string = param.string.split("");
+
+                string.forEach((char, index) => {
+                    setTimeout(() => {
+                        el.textContent += char;
+                    }, speed * index);
+                });
+            };
+            typewriter({
+                el: "#typewriter",
+                speed: 50,
+                string: subtitle()
+            });
+        });
+
+
+    </script>
+
+    <!------------ Vegas2 -------------->
+    <script src="./vegas/vegas.min.js"></script>
+    <script>
+        $(function () {
+            $('.vegas').vegas({
+                slides: [
+                    { src: 'img/1.png' },
+                    { src: 'img/2.png' },
+                    { src: 'img/3.png' },
+                    { src: 'img/4.png' },
+                ],
+                overlay: 'vegas/overlays/01.png', //フォルダ『overlays』の中からオーバーレイのパターン画像を選択
+                transition: 'fade', //スライドを遷移させる際のアニメーション
+                transitionDuration: 4000, //スライドの遷移アニメーションの時間
+                delay: 2000, //スライド切り替え時の遅延時間
+                animation: 'random', //スライド表示中のアニメーション
+                animationDuration: 5000, //スライド表示中のアニメーションの時間
+                timer: false
+            });
+        });
+    </script>
+    <script>    document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                locale: 'ja',   //日本語化
+                businessHours: true, //土日グレー
+                events: 'teru.frontendkouchikuka@gmail.com',
+                // events: "ja.japanese.official#holiday@group.v.calendar.google.com", // 日本の祝日カレンダ
+                googleCalendarApiKey: 'AIzaSyAoaRzBABxI3Ar2oi32JZkODVZ5F-AQJts'
+                // googleCalendarApiKey: "AIzaSyA_xhSbC_z8eW0IbUaq7luOBf2vRfWikso" 		// 日本の祝日カレンダー
+            });
+            calendar.render();
+        });
+    </script>
+</body>
+
+</html>
