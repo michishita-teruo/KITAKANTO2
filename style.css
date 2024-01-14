@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+a {
+    display: inline-block
+}
+
 
 
 /* 横スクロール禁止 */
@@ -27,6 +31,17 @@ html {
 
 #nav_target {
     display: none;
+}
+
+#header_menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s;
+}
+
+#header_menu.hide {
+    top: -100px;
 }
 
 header {
@@ -83,13 +98,10 @@ header {
 
 .line {
     height: 60px;
-
     border: 1px white solid;
 }
 
 .nav_menu ul li {
-    width: 50%;
-
 }
 
 .nav_menu ul li:hover {
@@ -129,7 +141,7 @@ header {
 #app {
     transform: rotate(-10deg);
     color: white;
-    z-index: 99;
+    z-index: 97;
     position: absolute;
     top: 30%;
     width: 100%;
@@ -750,9 +762,9 @@ footer {
     height: 80px;
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width: 1024px) {
 
-    /* 画面サイズが480pxからはここを読み込む */
+    /* 画面サイズが1024pxからはここを読み込む */
     .header_menu {
         width: 100%;
     }
@@ -828,7 +840,7 @@ footer {
     #app {
         transform: rotate(-10deg);
         color: white;
-        z-index: 99;
+        z-index: 97;
         position: absolute;
         top: 20%;
         width: 80%;
@@ -846,28 +858,34 @@ footer {
     }
 
     #nav_target {
-        z-index: 999;
-        background-color: skyblue;
         position: fixed;
-        right: 0%;
+        display: none;
         height: 100vh;
         width: 100%;
-        padding-top: 30vh;
-        bottom: 100%;
-        transform: translateX(-100%);
-        transition: all 0.5s;
-        display: block;
-    }
-
-    nav ul li {
+        padding-top: 5rem;
+        background-color: #21a1d0;
+        overflow-y: hidden;
         text-align: center;
-        list-style-type: none;
+        z-index: 98;
+
     }
 
-    .nav_active {
-        bottom: 0;
-        transition: all 0.5s;
+    .nav_menu_ham ul li a {
+        padding: 2rem 0;
+        list-style-type: none;
+        text-decoration: none;
+        color: white;
+
     }
+    .nav_menu_ham ul li a p,
+    .nav_menu_ham ul li a small{
+        font-family: 'Sawarabi Mincho', serif;
+    }
+
+    .nav_menu_ham ul li a p {
+        font-size: 2rem;
+    }
+
 
     /* about */
     .about_title h1 {
@@ -1024,5 +1042,109 @@ footer {
     .setumeikai_box2 {
         margin: 0 auto;
         width: 90%;
+    }
+}
+
+/* phind */
+.hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background-color: #fff;
+    z-index: 999;
+    /* transform: translateX(-100%); */
+    transition: transform 0.3s ease-in-out;
+}
+
+
+#hamburger-icon {
+    cursor: pointer;
+}
+
+#hamburger-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333;
+}
+
+.navigation-menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navigation-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navigation-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#hamburger-icon {
+    width: 30px;
+    height: 22px;
+    position: relative;
+    cursor: pointer;
+}
+
+#hamburger-icon span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #333;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transition: .25s ease-in-out;
+}
+
+#hamburger-icon span:nth-child(1) {
+    top: 0px;
+}
+
+#hamburger-icon span:nth-child(2) {
+    top: 9px;
+}
+
+#hamburger-icon span:nth-child(3) {
+    top: 18px;
+}
+
+#hamburger-icon.open span:nth-child(1) {
+    top: 9px;
+    transform: rotate(135deg);
+}
+
+#hamburger-icon.open span:nth-child(2) {
+    width: 0%;
+    left: 50%;
+}
+
+#hamburger-icon.open span:nth-child(3) {
+    top: 9px;
+    transform: rotate(-135deg);
+}
+
+#hamburger-icon.open {
+    animation: rotation 0.5s linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
     }
 }

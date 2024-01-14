@@ -6,11 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>北関東学院</title>
 
-    <!-- CSS読み込み -->
-    <link rel="stylesheet" href="./style.css">
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
     <!-- GoogleFont読み込み -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
     <!-- Vega2 -->
     <link rel="stylesheet" href="./vegas/vegas.min.css">
+    <!-- CSS読み込み -->
+    <link rel="stylesheet" href="./style.css">
     <!-- Fullカレンダー読み込み -->
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js'></script>
     <script src="./js/index.global.min.js"></script>
@@ -28,19 +26,39 @@
 <html>
 
 <body>
-    <header>
+
+    <header id="header_menu">
         <div class="header_menu">
 
-            <!-- ハンバーガーメニュー480px以下で表示 -->
+            <!-- phind -->
+            <div class="hamburger-menu">
+                <div id="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav id="navigation-menu" class="navigation-menu">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <!-- Add more links as needed -->
+                    </ul>
+                </nav>
+            </div>
+
+            <!--  -->
+
+            <!-- ハンバーガーメニュー1024px以下で表示 -->
             <div class="header_logo"><img src="./img/logo.png" alt=""></div>
-            <div class="openbtn " id="target" onclick="activebtn()">
+            <div class="openbtn" id="target">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <!-- ここから -->
 
-            <nav class="nav_menu">
+            <nav class="nav_menu ">
                 <ul>
                     <span class="line"></span>
                     <li>
@@ -77,10 +95,13 @@
 
                 </ul>
             </nav>
+
+
         </div>
     </header>
-    <!-- ハンバーガーメニューオープン要素 -->
-    <nav id="nav_target">
+
+    <!-- ham nav -->
+    <div id="nav_target" class="nav_menu_ham">
         <ul>
             <li>
                 <a href="#about">
@@ -107,12 +128,14 @@
                 </a>
             </li>
         </ul>
-    </nav>
+    </div>
 
 
 
-    <div class="vegas"></div>
 
+
+    <div class="vegas" id="mainvisual"></div>
+    <!-- ハンバーガーメニューオープン要素 -->
 
     <div id="app">
         <span id="typewriter"></span>
@@ -537,136 +560,19 @@
     <footer>
         <small>© KITAKANTO GAKUIN 2023</small>
     </footer>
-    <script>
-        // スクロールで発火
-        const scheduleAnime = () => {
-            let time = 0.2;
-            let value = time;
-            let scroll;
-            let winH = $(window).height();
-            let objTop = $('#about').offset().top;
-            $(window).on('scroll', function () {
-                scroll = $(window).scrollTop();
-                if (scroll >= objTop - winH / 2) {
-                    //ここに処理
-                }
-            });
-        }
 
 
-        // ハンバーガーメニュー
-
-        const activebtn = () => {
-            document.getElementById('target').classList.toggle("active");
-            document.getElementById('nav_target').classList.toggle("nav_active");
-        }
-
-
-        // クラス名.course1_box要素がクリックされたときに発火
-        $(".course1_box").on("click", (event) => {
-            let value = $(event.currentTarget).next();
-            value.stop().slideToggle(1500);
-            $('#course1_plus').toggleClass('active')
-        })
-
-        $(".course2_box").on("click", (event) => {
-            let value = $(event.currentTarget).next();
-            value.stop().slideToggle(1500);
-            $('#course2_plus').toggleClass('active')
-        })
-
-        $(".course3_box").on("click", (event) => {
-            let value = $(event.currentTarget).next();
-            value.stop().slideToggle(1500);
-            $('#course3_plus').toggleClass('active')
-        });
-
-
-        $(window).on('load', () => {
-            const subtitle = () => {
-                var num = Math.floor(10 * Math.random());
-                let mainTitle;
-                if (num <= 1) {
-                    mainTitle = "未来のテックプロフェッショナルになるチャンス"
-                } else if ((num >= 2) && (num <= 3)) {
-                    mainTitle = "ウェブの舞台裏を学び、夢のキャリアを実現しよう"
-                } else if ((num >= 3) && (num <= 4)) {
-                    mainTitle = "レイアウトからデザインまで、全てを学べる場所"
-                } else if ((num >= 4) && (num <= 5)) {
-                    mainTitle = "テクノロジーの力でキャリアを形にしましょう"
-                } else if ((num >= 5) && (num <= 6)) {
-                    mainTitle = "テクノロジーの未来を共に切り拓こう"
-                } else if ((num >= 6) && (num <= 7)) {
-                    mainTitle = "キャリアの高みへの始まりを踏み出そう"
-                } else if ((num >= 7) && (num <= 8)) {
-                    mainTitle = "デジタルエキスパートになるためのトレーニングセンター"
-                } else if ((num >= 8) && (num <= 9)) {
-                    mainTitle = "未来のテックリーダーへ道がここに"
-                } else if ((num >= 9) && (num <= 10)) {
-                    mainTitle = "テクノロジーの力でキャリアを形にしましょう"
-                } else if (num = 0) {
-                    mainTitle = "ウェブの世界を創造し、プロフェッショナルに成長する"
-                }
-                console.log(num);
-                return mainTitle;
-            }
-
-            const typewriter = (param) => {
-                let el = document.querySelector(param.el);
-                let speed = param.speed;
-                let string = param.string.split("");
-
-                string.forEach((char, index) => {
-                    setTimeout(() => {
-                        el.textContent += char;
-                    }, speed * index);
-                });
-            };
-            typewriter({
-                el: "#typewriter",
-                speed: 50,
-                string: subtitle()
-            });
-        });
-
-
-    </script>
-
-    <!------------ Vegas2 -------------->
+    <!------------ script -------------->
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-- vegas2 -->
     <script src="./vegas/vegas.min.js"></script>
-    <script>
-        $(function () {
-            $('.vegas').vegas({
-                slides: [
-                    { src: 'img/1.png' },
-                    { src: 'img/2.png' },
-                    { src: 'img/3.png' },
-                    { src: 'img/4.png' },
-                ],
-                overlay: 'vegas/overlays/01.png', //フォルダ『overlays』の中からオーバーレイのパターン画像を選択
-                transition: 'fade', //スライドを遷移させる際のアニメーション
-                transitionDuration: 4000, //スライドの遷移アニメーションの時間
-                delay: 2000, //スライド切り替え時の遅延時間
-                animation: 'random', //スライド表示中のアニメーション
-                animationDuration: 5000, //スライド表示中のアニメーションの時間
-                timer: false
-            });
-        });
-    </script>
-    <script>    document.addEventListener('DOMContentLoaded', function () {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth',
-                locale: 'ja',   //日本語化
-                businessHours: true, //土日グレー
-                events: 'teru.frontendkouchikuka@gmail.com',
-                // events: "ja.japanese.official#holiday@group.v.calendar.google.com", // 日本の祝日カレンダ
-                googleCalendarApiKey: 'AIzaSyAoaRzBABxI3Ar2oi32JZkODVZ5F-AQJts'
-                // googleCalendarApiKey: "AIzaSyA_xhSbC_z8eW0IbUaq7luOBf2vRfWikso" 		// 日本の祝日カレンダー
-            });
-            calendar.render();
-        });
-    </script>
+
+    <script src="./main.js"></script>
+
+
+
 </body>
 
 </html>
